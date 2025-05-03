@@ -36,7 +36,8 @@ export default defineSchema({
     authorId: v.id('users'),
     content: v.string(),
     parentId: v.optional(v.union(v.id('comments'), v.string())),
-    commentDeep: v.number()
+    commentDeep: v.number(),
+    contentDeleted: v.boolean()
   }).index('byPostId', ['postId'])
     .index('byParentId', ['parentId'])
 },{

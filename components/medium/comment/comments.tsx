@@ -25,7 +25,8 @@ export default function Comments({ postId }: { postId: Id<'posts'>}) {
           const postComment = await createComment({
             content: commentInput,
             postId,
-            commentDeep: 0
+            commentDeep: 0,
+            contentDeleted: false
           })
 
           if (!postComment) throw new Error('Failed to create comment')

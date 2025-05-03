@@ -37,6 +37,7 @@ export type Comment = {
   parentId?: Id<'comments'> | string
   children?: Array<Comment>
   commentDeep: number
+  contentDeleted: boolean
 }
 
 export type User = {

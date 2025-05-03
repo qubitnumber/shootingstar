@@ -88,7 +88,8 @@ export const createComment = mutation({
     postId: v.id("posts"),
     content: v.string(),
     parentId: v.optional(v.union(v.id("comments"), v.string())),
-    commentDeep: v.number()
+    commentDeep: v.number(),
+    contentDeleted: v.boolean()
   },
   handler: async (ctx, args) => {
     const user = await getCurrentUserOrThrow(ctx)
@@ -97,7 +98,8 @@ export const createComment = mutation({
       authorId: user._id,
       postId: args.postId,
       parentId: args.parentId ? args.parentId : '',
-      commentDeep: args.commentDeep ? args.commentDeep : 0
+      commentDeep: args.commentDeep ? args.commentDeep : 0,
+      contentDeleted: args.contentDeleted ? args.contentDeleted : false
     }
 
     const comment = await ctx.db.insert('comments', data)
@@ -107,12 +109,12 @@ export const createComment = mutation({
 
 export const upsertComment = mutation({
   args: {
-    id: v.id('comments'),
-    content: v.string()
+    _id: v.id('comments'),
+    content: v.optional(v.string()),
+    contentDeleted: v.optional(v.boolean())
   },
   async handler(ctx, args) {
-    const user = await getCurrentUserOrThrow(ctx)
-    const comment = await ctx.db.get(args.id)
+    const comment = await ctx.db.get(args._id)
 
     if (!comment) {
       return null
@@ -120,10 +122,10 @@ export const upsertComment = mutation({
 
     const data = {
       ...comment,
-      content: args.content
+      ...args,
     }
 
-    await ctx.db.patch(args.id, data)
+    await ctx.db.patch(args._id, data)
 
     return data
   }

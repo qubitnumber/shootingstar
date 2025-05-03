@@ -45,12 +45,12 @@ export default function Comment({
   const deleteComment = useMutation(api.comments.deleteComment)
 
   if (delComment) {
-    deleteComment({ commentId: comment._id})
+    upsertComment({ _id: comment._id, contentDeleted: true})
     setDelComment(false)
   }
 
   if (!editComment && replyText) {
-    upsertComment({ id: comment._id, content: replyText})
+    upsertComment({ _id: comment._id, content: replyText})
     setReplyText('')
     setEditComment(false)
   }
@@ -60,7 +60,8 @@ export default function Comment({
       content: newReplyText,
       postId,
       parentId: comment._id,
-      commentDeep: comment.commentDeep + 1
+      commentDeep: comment.commentDeep + 1,
+      contentDeleted: false
     })
     setNewReplyText('')
     setShowReplyBox(false)
@@ -93,7 +94,7 @@ export default function Comment({
         <div className={`${isHidden ? 'hidden' : ''}`}>
           <CircleMinus className={`w-5 h-5 ${styles.circleMinus}`} onClick={() => setIsHidden(prev => !prev)} />
           <div className={`${styles.verticleLine}`}>
-            <div>
+            <div className={styles.commentShowBox}>
               {editComment ? (
                 <div className='ml-9'>
                   <InputComment
@@ -103,7 +104,7 @@ export default function Comment({
                   />
                 </div>
                 ) : (
-                <div className="text-sm text-muted-foreground ml-9">{comment?.content}</div>
+                <div className="text-sm text-muted-foreground ml-8">{comment.contentDeleted ? 'deleted' : comment?.content}</div>
                 )
               }
               <div className='flex flex-row justify-start items-center gap-3 ml-12 mb-2'>
