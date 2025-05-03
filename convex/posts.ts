@@ -96,7 +96,7 @@ export const getPostsByTag =  query({
     return Promise.all(
       allPosts
         .filter((post) => {
-          const taged = post.tags.map((item: any) => item.text.toLowerCase() === tag.toLowerCase())
+          const taged = post.tags.map((item: any) => item.text.toLowerCase() === tag?.toLowerCase())
           if (taged.includes(true)) {
             return post
           }
