@@ -45,7 +45,7 @@ export default function Comment({
   const deleteComment = useMutation(api.comments.deleteComment)
 
   if (delComment) {
-    upsertComment({ _id: comment._id, contentDeleted: true})
+    upsertComment({ _id: comment._id, contentDeleted: true, content: ''})
     setDelComment(false)
   }
 
@@ -124,6 +124,7 @@ export default function Comment({
                   <DropdownComment
                     setEditComment={setEditComment}
                     setDelComment={setDelComment}
+                    isDeleted={comment.contentDeleted}
                   />
                 </div>
               </div>

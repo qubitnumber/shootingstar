@@ -16,9 +16,11 @@ import {
 export default function DropdownComment({
   setEditComment,
   setDelComment,
+  isDeleted
 }: {
   setEditComment: Function,
-  setDelComment: Function
+  setDelComment: Function,
+  isDeleted: boolean
 }) {
 
   return (
@@ -29,6 +31,7 @@ export default function DropdownComment({
       <DropdownMenuContent className="w-50">
         <DropdownMenuItem>
           <Button
+            disabled={isDeleted}
             variant='ghost'
             onClick={() => setEditComment(true)}
           >
@@ -38,6 +41,7 @@ export default function DropdownComment({
         </DropdownMenuItem>
         <DropdownMenuItem>
           <Button
+            disabled={isDeleted}
             variant='ghost'
             onClick={() => setDelComment(true)}
           >

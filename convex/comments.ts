@@ -89,7 +89,7 @@ export const createComment = mutation({
     content: v.string(),
     parentId: v.optional(v.union(v.id("comments"), v.string())),
     commentDeep: v.number(),
-    contentDeleted: v.boolean()
+    contentDeleted: v.optional(v.boolean())
   },
   handler: async (ctx, args) => {
     const user = await getCurrentUserOrThrow(ctx)
