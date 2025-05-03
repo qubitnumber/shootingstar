@@ -3,8 +3,8 @@ import RecentPosts from '@/components/medium/recent-posts'
 import WhoToFollow from '@/components/medium/who-to-follow'
 import RecommendedTopics from '@/components/medium/recommended-topics'
 
-export default function PostPage({ params }: { params: { tag: string } }) {
-  const { tag } = params
+export default async function PostPage({ params }: { params: Promise<{ tag: string }> }) {
+  const { tag } = await params
 
   return (
     <section className='mt-[65px]'>

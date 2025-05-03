@@ -2,8 +2,8 @@
 
 import UpsertPostForm from '@/components/medium/upsert-post-form'
 
-export default function Upsert({ params }: { params: { slug: string } }) {
-  const { slug } = params
+export default async function Upsert({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
 
   return (
     <section className='pb-24 pt-32 sm:pt-40'>

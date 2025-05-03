@@ -1,8 +1,8 @@
 import AuthorPosts from '@/components/medium/authorPosts'
 import Following from '@/components/medium/following'
 
-export default function PostPage({ params }: { params: { atTag: string } }) {
-  const { atTag } = params
+export default async function PostPage({ params }: { params: Promise<{ atTag: string }> }) {
+  const { atTag } = await params
 
   return (
     <section className='mt-[65px]'>
