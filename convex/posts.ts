@@ -159,7 +159,7 @@ export const getPostsByAtTag =  query({
 
     const posts = await ctx.db
       .query("posts")
-      .withIndex("byAuthorId", (q) => q.eq("authorId", author?._id))
+      .withIndex("byAuthorId", (q) => q.eq("authorId", author?._id!))
       .order('desc')
       .collect();
 
