@@ -1,0 +1,18 @@
+.inputtextarea {
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+}
+
+.verticleLine {
+  height: calc-size(auto);
+  width: 1;
+  border-left: double 1px #ccc;
+  margin: -0.1rem 0rem 0rem 0.9rem;
+  border-bottom-left-radius: 10px;
+}
+
+.circleMinus {
+  margin: 0rem 0rem 0rem 0.3rem;
+}
