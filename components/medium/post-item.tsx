@@ -66,7 +66,7 @@ export default function PostItem({ post }: { post: Post }) {
           {/* Tag */}
           <div className='mt-7 flex items-center justify-between text-sm text-muted-foreground'>
             <div className='flex items-center gap-2'>
-              {post.tags && post.tags.length > 0 && post.tags.map((tag, i) =>(
+              {post.tags && post.tags.length > 0 && post.tags.map((tag: any, i) =>(
                 <Link key={i} href={`/tags/${tag.text}`} className='block'>
                   <div className='flex items-center'>
                     <Hash className='h-4 w-4' />
