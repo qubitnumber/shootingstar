@@ -24,7 +24,7 @@ export default function RecommendedTopics() {
 
       <CardContent>
         <div className='flex flex-wrap gap-2'>
-          {tags?.map((tag, i) => (
+          {tags?.map((tag: any, i) => (
             <Link key={i} href={`/tags/${tag}`} className='block'>
               <div className='flex items-center text-sm text-muted-foreground'>
                 <Hash className='h-4 w-4' />
