@@ -82,7 +82,7 @@ export default function Following({ atTag }: { atTag: string}) {
         </ul>
       </CardContent>
 
-      {followersList && followersList.length > 1 && (<CardFooter>
+      {followersList && followersList.length > 0 && (<CardFooter>
         <Link href={`/following/${atTag}`} className='text-sm font-light text-emerald-600'>
           {`See all (${followersList.length})`}
         </Link>

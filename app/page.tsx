@@ -8,7 +8,7 @@ export default function Home() {
     <section className='mt-[65px]'>
       <div className='container'>
         <div className='flex flex-col gap-x-16 gap-y-6 xl:flex-row xl:items-start'>
-          <main className='flex-1 pt-20 mr-20 xl:py-20'>
+          <main className='flex-1 pt-20 xl:py-20'>
             <Posts />
           </main>
 
