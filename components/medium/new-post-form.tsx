@@ -189,7 +189,7 @@ export default function NewPostForm() {
               </p>
             )}
           </div>
-          <div className='flex-1'>
+          <div className='flex-1 hidden'>
             <Input disabled type='text' placeholder='Post slug' {...register('slug')} />
             {errors.slug?.message && (
               <p className='mt-1 px-2 text-xs text-red-400'>
