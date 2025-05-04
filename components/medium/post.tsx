@@ -196,7 +196,7 @@ export default function Post({ slug }: { slug: string }) {
               <Link key={i} href={`/tags/${tag.text}`} className='block'>
                 <div key={i} className='flex items-center'>
                   <Hash className='h-4 w-4' />
-                  <span>{tag.text}</span>
+                  <span>{tag.text.toUpperCase()}</span>
                 </div>
               </Link>
             ))}

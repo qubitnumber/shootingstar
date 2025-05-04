@@ -11,8 +11,8 @@ export async function createSlugFromName(name: string) {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)+/g, '')
     .substring(0, 10)
-  const word = await generateRandomWord(5)
-  return slug.concat('-', word)
+  const numbers = getRandomNumberWithDigits(5)
+  return slug.concat('-', numbers.toString())
 }
 
 export function createAtTagFromName(name: string) {
@@ -31,7 +31,7 @@ function getRandomNumberWithDigits(digits: number) {
 }
 
 export async function generateRandomWord(length: number) {
-  const word = fetch(`https://random-word-api.herokuapp.com/word?length=${length}`)
+  const word = await fetch(`https://random-word-api.herokuapp.com/word?length=${length}`)
     .then(response => response.json())
     .then(data => data[0])
   return word

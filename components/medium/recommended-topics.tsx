@@ -28,7 +28,7 @@ export default function RecommendedTopics() {
             <Link key={i} href={`/tags/${tag}`} className='block'>
               <div className='flex items-center text-sm text-muted-foreground'>
                 <Hash className='h-4 w-4' />
-                <span>{tag}</span>
+                <span>{tag.toUpperCase()}</span>
               </div>
             </Link>
           ))}
