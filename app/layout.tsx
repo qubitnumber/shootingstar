@@ -29,7 +29,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Bridge',
+  title: 'Bridge AI',
   description: 'NextJs Convex Project'
 }
 

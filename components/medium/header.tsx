@@ -28,7 +28,7 @@ export default function Header() {
             <ul className='flex flex-col gap-3 text-sm'>
               <li className='font-serif text-2xl font-semibold'>
                 <SheetClose asChild>
-                  <Link href='/'>Bridge</Link>
+                  <Link href='/'>Bridge AI</Link>
                 </SheetClose>
               </li>
             </ul>
@@ -37,7 +37,7 @@ export default function Header() {
 
         <ul className='hidden items-center gap-14 text-sm font-medium sm:flex'>
           <li className='font-serif text-xl font-semibold'>
-            <Link href='/'>Bridge</Link>
+            <Link href='/'>Bridge AI</Link>
           </li>
           <InputSearch />
         </ul>
