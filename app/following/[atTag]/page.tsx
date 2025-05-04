@@ -1,21 +1,19 @@
-import Posts from '@/components/medium/posts'
-import RecentPosts from '@/components/medium/recent-posts'
-import WhoToFollow from '@/components/medium/who-to-follow'
-import RecommendedTopics from '@/components/medium/recommended-topics'
+import FollowingPosts from '@/components/medium/followingPosts'
+import Following from '@/components/medium/following'
 
-export default function Home() {
+export default async function FollowingPage({ params }: { params: Promise<{ atTag: string }> }) {
+  const { atTag } = await params
+
   return (
     <section className='mt-[65px]'>
       <div className='container'>
         <div className='flex flex-col gap-x-16 gap-y-6 xl:flex-row xl:items-start'>
           <main className='flex-1 pt-20 mr-20 xl:py-20'>
-            <Posts />
+            <FollowingPosts atTag={decodeURIComponent(atTag)} />
           </main>
 
           <aside className='w-full flex-col justify-between gap-6 pb-10 md:flex-row xl:sticky xl:top-[65px] xl:w-[350px] xl:flex-col xl:py-20'>
-            <RecentPosts />
-            <RecommendedTopics />
-            <WhoToFollow />
+            <Following atTag={decodeURIComponent(atTag)} />
           </aside>
         </div>
       </div>

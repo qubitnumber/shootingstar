@@ -28,10 +28,12 @@ export default function Comment({
   comment,
   postId,
   parentId,
+  userId,
 }: {
   comment: CommentType,
   postId: Id<'posts'>,
   parentId?: Id<'comments'>,
+  userId?: Id<'users'>
 }) {
   const [editComment, setEditComment] = useState(false)
   const [delComment, setDelComment] = useState(false)
@@ -107,27 +109,28 @@ export default function Comment({
                 <div className="text-sm text-muted-foreground ml-8">{comment.contentDeleted ? 'deleted' : comment?.content}</div>
                 )
               }
-              <div className='flex flex-row justify-start items-center gap-3 ml-12 mb-2'>
-                <Button
-                  disabled={comment.commentDeep >= 10 }
-                  className='h-5 w-5'
-                  size='sm'
-                  variant='ghost'
-                  onClick={() => {
-                    setShowReplyBox(true)
-                  }}
-                >
-                  <MessageCircle />
-                  <div className="text-sm text-muted-foreground">Reply</div>
-                </Button>
-                <div className={`ml-5 inline-flex items-center`}>
-                  <DropdownComment
-                    setEditComment={setEditComment}
-                    setDelComment={setDelComment}
-                    isDeleted={comment.contentDeleted}
-                  />
-                </div>
-              </div>
+              {userId && (
+                <div className='flex flex-row justify-start items-center gap-3 ml-12 mb-2'>
+                  <Button
+                    disabled={comment.commentDeep >= 10 }
+                    className='h-5 w-5'
+                    size='sm'
+                    variant='ghost'
+                    onClick={() => {
+                      setShowReplyBox(true)
+                    }}
+                  >
+                    <MessageCircle />
+                    <div className="text-sm text-muted-foreground">Reply</div>
+                  </Button>
+                  <div className={`ml-5 inline-flex items-center`}>
+                    <DropdownComment
+                      setEditComment={setEditComment}
+                      setDelComment={setDelComment}
+                      isDeleted={comment.contentDeleted}
+                    />
+                  </div>
+                </div>)}
               {showReplyBox && (
               <div className='ml-8'>
                 <InputComment
@@ -144,6 +147,7 @@ export default function Comment({
                     key={childComment._id}
                     comment={childComment}
                     postId={postId}
+                    userId={userId}
                 />
               ))}
             </div>

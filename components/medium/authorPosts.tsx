@@ -5,9 +5,11 @@ import { api } from '@/convex/_generated/api'
 
 import PostItem from '@/components/medium/post-item'
 import { Spinner } from '@/components/ui/spinner'
+import { combineName } from '@/lib/utils'
 
 export default function AuthorPosts({ atTag }: { atTag: string}) {
   const posts = useQuery(api.posts.getPostsByAtTag, { atTag  })
+  const author = useQuery(api.users.getUserByAtTag, { atTag })
 
   if (!posts) {
     return (
@@ -18,10 +20,13 @@ export default function AuthorPosts({ atTag }: { atTag: string}) {
   }
 
   return (
-    <ul>
-      {posts && posts.map(post => (
-          <PostItem key={post._id} post={post} />
-      ))}
-    </ul>
+    <div className='flex flex-col'>
+      <div className='font-sans text-3xl font-semibold mb-7'>{combineName(author!)}</div>
+      <ul>
+        {posts && posts.map(post => (
+            <PostItem key={post._id} post={post} />
+        ))}
+      </ul>
+    </div>
   )
 }

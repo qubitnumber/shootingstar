@@ -14,6 +14,7 @@ import Comment from '@/components/medium/comment/comment'
 export default function Comments({ postId }: { postId: Id<'posts'>}) {
   const createComment = useMutation(api.comments.createComment)
   const comments = useQuery(api.comments.getParentCommentsByPostId, { postId })
+  const user = useQuery(api.users.current)
 
   const [editable, setEditable] = useState(false)
   const [commentInput, setCommentInput] = useState('');
@@ -43,22 +44,23 @@ export default function Comments({ postId }: { postId: Id<'posts'>}) {
   return (
     <div className="mx-auto w-2xl space-y-8 py-8">
       <div className="space-y-4">
-        <div className="grid gap-2">
-          {editable ? (
-            <InputComment
-              setCommentInput={setCommentInput}
-              setEditable={setEditable}
-            />
-          ) : (
-            <Button
-              variant="outline"
-              className='gap-2 rounded-full justify-start font-semibold pl-7 h-14'
-              onClick={() => setEditable(true)}
-            >
-              Join the conversation
-            </Button>
-          )}
-        </div>
+        {user && (
+          <div className="grid gap-2">
+            {editable ? (
+              <InputComment
+                setCommentInput={setCommentInput}
+                setEditable={setEditable}
+              />
+            ) : (
+              <Button
+                variant="outline"
+                className='gap-2 rounded-full justify-start font-semibold pl-7 h-14'
+                onClick={() => setEditable(true)}
+              >
+                Join the conversation
+              </Button>
+            )}
+          </div>)}
       </div>
       <div className="space-y-4">
         {comments?.map((comment) => (
@@ -66,6 +68,7 @@ export default function Comments({ postId }: { postId: Id<'posts'>}) {
             key={comment._id}
             comment={comment}
             postId={postId}
+            userId={user?._id}
           />
         ))}
       </div>

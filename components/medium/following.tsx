@@ -21,8 +21,8 @@ import {
 
 
 export default function Following({ atTag }: { atTag: string}) {
-  const followings = useQuery(api.users.getUserFollowingsByAtTag, { atTag })
-  const followersList = useQuery(api.users.getUsersByClerkIds, { clerkIds: followings ?? [] })
+  const user = useQuery(api.users.getUserByAtTag, { atTag })
+  const followersList = useQuery(api.users.getUsersByClerkIds, { clerkIds: user?.followings ?? [] })
   const currentUser = useQuery(api.users.current)
   const upsertUser = useMutation(api.users.upsertFromClerk)
 
@@ -47,7 +47,7 @@ export default function Following({ atTag }: { atTag: string}) {
 
         <ul className='flex flex-col gap-3'>
         {followersList && followersList.length ? (
-          followersList?.map((follower) => {
+          followersList?.slice(0, 4).map((follower) => {
             return (
               <li key={follower?._id} className='flex items-center justify-between'>
                 <Link href={`/author/${follower?.atTag}`} className='block'>
@@ -82,9 +82,9 @@ export default function Following({ atTag }: { atTag: string}) {
         </ul>
       </CardContent>
 
-      {followersList && followersList.length > 5 && (<CardFooter>
-        <Link href='/' className='text-sm font-light text-emerald-600'>
-          See all(20)
+      {followersList && followersList.length > 1 && (<CardFooter>
+        <Link href={`/following/${atTag}`} className='text-sm font-light text-emerald-600'>
+          {`See all (${followersList.length})`}
         </Link>
       </CardFooter>
       )}

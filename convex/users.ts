@@ -25,7 +25,9 @@ export const current = query({
 })
 
 export const getUsersByClerkIds = query({
-  args: { clerkIds: v.array(v.string()) },
+  args: {
+    clerkIds: v.array(v.string())
+  },
   handler: async (ctx, { clerkIds }) => {
     if (clerkIds) {
       return Promise.all(
@@ -36,15 +38,13 @@ export const getUsersByClerkIds = query({
   }
 })
 
-export const getUserFollowingsByAtTag =  query({
+export const getUserByAtTag =  query({
   args: { atTag: v.string() },
   handler: async (ctx, { atTag }) => {
-    const user = await ctx.db
+    return await ctx.db
       .query("users")
       .withIndex("byAtTag", (q) => q.eq("atTag", atTag))
       .unique()
-
-    return user?.followings
   }
 })
 
