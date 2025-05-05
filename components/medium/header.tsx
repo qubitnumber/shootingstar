@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { LogOut } from 'lucide-react'
 
 import { ThemeToggle } from '@/components/medium/theme-toggle'
 import InputSearch from '@/components/medium/input-search'
@@ -61,7 +60,8 @@ export default function Header() {
           </SignedOut>
 
           <SignedIn>
-            <Badge className='text-sm' variant="destructive"><SignOutButton redirectUrl= "/" /></Badge>
+            <UserButton />
+            {/* <Badge className='text-sm' variant="destructive"><SignOutButton redirectUrl= "/" /></Badge> */}
           </SignedIn>
         </div>
       </nav>
