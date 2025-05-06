@@ -1,6 +1,5 @@
 'use client';
 
-import { Suspense } from 'react'
 import Posts from '@/components/medium/posts'
 import RecentPosts from '@/components/medium/recent-posts'
 import WhoToFollow from '@/components/medium/who-to-follow'
