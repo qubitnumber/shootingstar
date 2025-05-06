@@ -11,9 +11,8 @@ import {
 } from '@/components/ui/sheet'
 
 import { Menu, NotebookPen } from 'lucide-react'
-import { SignedIn, SignedOut, SignInButton, SignOutButton, UserButton } from '@clerk/nextjs'
+import { SignedIn, UserButton } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
-import { Badge } from "@/components/ui/badge"
 
 export default function Header() {
   return (
@@ -38,7 +37,9 @@ export default function Header() {
           <li className='font-serif text-xl font-semibold'>
             <Link href='/'>Bridge AI</Link>
           </li>
-          <InputSearch />
+          <SignedIn>
+            <InputSearch />
+          </SignedIn>
         </ul>
 
         <div className='flex items-center justify-between gap-6'>
@@ -53,15 +54,8 @@ export default function Header() {
             </Button>
           </SignedIn>
 
-          <SignedOut>
-            <SignInButton>
-              <Button size='sm'>Sign in</Button>
-            </SignInButton>
-          </SignedOut>
-
           <SignedIn>
             <UserButton />
-            {/* <Badge className='text-sm' variant="destructive"><SignOutButton redirectUrl= "/" /></Badge> */}
           </SignedIn>
         </div>
       </nav>

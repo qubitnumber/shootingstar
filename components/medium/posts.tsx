@@ -5,14 +5,14 @@ import { api } from '@/convex/_generated/api'
 
 import PostItem from '@/components/medium/post-item'
 import { Spinner } from '@/components/ui/spinner'
-import { useSearch }  from '@/context/SearchContext';
+import { useSearch }  from '@/context/SearchContext'
 
 export default function Posts() {
   const posts = useQuery(api.posts.getPosts)
-  const { searchTag } = useSearch();
+  const { searchTag, setSearchTag } = useSearch()
   const searchPosts = useQuery(api.posts.getPostsByTag, { tag: searchTag })
 
-  if (!posts) {
+  if (!searchTag && !posts) {
     return (
       <div className='flex h-40 items-center justify-center'>
         <Spinner size='lg' />
