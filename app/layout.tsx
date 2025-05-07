@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className='scroll-smooth' suppressHydrationWarning>
-      <ClerkProvider afterSignOutUrl={'/sign-in'}>
+      <ClerkProvider afterSignOutUrl={'/'}>
         <body
           className={cn(
             'flex h-screen flex-col',

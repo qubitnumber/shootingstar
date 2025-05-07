@@ -41,12 +41,14 @@ export default function ButtonFollowing({
   followings,
   clerkUserId,
   addFollowing,
-  removeFollowing
+  removeFollowing,
+  disabled
 } : {
   followings?: string[],
   clerkUserId?: string,
-  addFollowing?: () => void
-  removeFollowing?: () => void
+  addFollowing?: () => void,
+  removeFollowing?: () => void,
+  disabled:  boolean,
 }) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -75,7 +77,7 @@ export default function ButtonFollowing({
               name="follow"
               render={({ field }) => (
                 <FormItem>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <Select disabled={disabled} onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger className={'border font-light rounded-full'}>
                         <SelectValue placeholder="Following" />
@@ -113,6 +115,7 @@ export default function ButtonFollowing({
       ) : (
         <div className="space-y-6 w-full">
           <Button
+            disabled={disabled}
             className={'border font-light rounded-full ml-3 mr-2'}
             variant='outline'
             size='lg'

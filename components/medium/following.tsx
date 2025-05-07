@@ -50,29 +50,32 @@ export default function Following({ atTag }: { atTag: string}) {
           followersList?.slice(0, 4).map((follower) => {
             return (
               <li key={follower?._id} className='flex items-center justify-between'>
-                <Link href={`/author/${follower?.atTag}`} className='block'>
-                  <div className='inline-flex items-center gap-2 pt-1'>
-                    <Avatar className='size-5'>
-                      <AvatarImage src={follower?.imageUrl} alt={combineName(follower)} />
-                      <AvatarFallback>{follower?.firstName?.charAt(0)}</AvatarFallback>
-                    </Avatar>
+                <>
+                  <Link href={`/author/${follower?.atTag}`} className='block'>
+                    <div className='inline-flex items-center gap-2 pt-1'>
+                      <Avatar className='size-5'>
+                        <AvatarImage src={follower?.imageUrl} alt={combineName(follower)} />
+                        <AvatarFallback>{follower?.firstName?.charAt(0)}</AvatarFallback>
+                      </Avatar>
 
-                    <h2 className='text-sm font-medium'>{combineName(follower)}</h2>
+                      <h2 className='text-sm font-medium'>{combineName(follower)}</h2>
+                    </div>
+                  </Link>
+
+                  <div className='text-sm'>
+                    <ButtonFollowing
+                      disabled={currentUser?.clerkUserId === follower?.clerkUserId}
+                      followings={currentUser?.followings!}
+                      clerkUserId={follower?.clerkUserId!}
+                      addFollowing={() =>
+                        addFollowing(follower?.clerkUserId!, combineName(follower))
+                      }
+                      removeFollowing={() =>
+                        removeFollowing(follower?.clerkUserId!, combineName(follower))
+                      }
+                    />
                   </div>
-                </Link>
-
-                <div className='text-sm'>
-                  <ButtonFollowing
-                    followings={currentUser?.followings!}
-                    clerkUserId={follower?.clerkUserId!}
-                    addFollowing={() =>
-                      addFollowing(follower?.clerkUserId!, combineName(follower))
-                    }
-                    removeFollowing={() =>
-                      removeFollowing(follower?.clerkUserId!, combineName(follower))
-                    }
-                  />
-                </div>
+                </>
               </li>
           )})) : (
             <div className="flex text-grey text-lg whitespace-pre-wrap">
