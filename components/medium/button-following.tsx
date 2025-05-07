@@ -48,7 +48,7 @@ export default function ButtonFollowing({
   clerkUserId?: string,
   addFollowing?: () => void,
   removeFollowing?: () => void,
-  disabled:  boolean,
+  disabled?:  boolean,
 }) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
