@@ -37,9 +37,9 @@ export default function Header() {
           <li className='font-serif text-xl font-semibold'>
             <Link href='/'>Bridge AI</Link>
           </li>
-          <SignedIn>
+          {/* <SignedIn>
             <InputSearch />
-          </SignedIn>
+          </SignedIn> */}
         </ul>
 
         <div className='flex items-center justify-between gap-6'>
