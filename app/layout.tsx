@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { cn } from '@/lib/utils'
-import { ClerkProvider, RedirectToSignIn, SignedIn, SignedOut } from '@clerk/nextjs'
+import { ClerkProvider } from '@clerk/nextjs'
 
 import Providers from '@/components/medium/providers'
 import Header from '@/components/medium/header'

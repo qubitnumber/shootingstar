@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/sheet'
 
 import { Menu, NotebookPen } from 'lucide-react'
-import { SignedIn, UserButton } from '@clerk/nextjs'
+import { RedirectToSignIn, SignedIn, SignedOut, UserButton, SignInButton } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 
 export default function Header() {
@@ -57,6 +57,10 @@ export default function Header() {
           <SignedIn>
             <UserButton />
           </SignedIn>
+
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
         </div>
       </nav>
     </header>
