@@ -4,7 +4,6 @@ import Posts from '@/components/medium/posts'
 import RecentPosts from '@/components/medium/recent-posts'
 import WhoToFollow from '@/components/medium/who-to-follow'
 import RecommendedTopics from '@/components/medium/recommended-topics'
-import { RedirectToSignIn, SignedIn, SignedOut } from '@clerk/nextjs'
 
 
 export default function Home() {
@@ -12,11 +11,6 @@ export default function Home() {
   return (
     <section className='mt-[30px]'>
       <div className='container'>
-        {/* <SignedOut>
-          <RedirectToSignIn />
-        </SignedOut> */}
-        {/* <SignedIn> */}
-
         <div className='flex flex-col gap-x-16 gap-y-6 xl:flex-row xl:items-start'>
           <main className='flex-1 pt-20 xl:py-20'>
             <Posts />
@@ -27,7 +21,6 @@ export default function Home() {
             <WhoToFollow />
           </aside>
         </div>
-        {/* </SignedIn> */}
       </div>
     </section>
   )
