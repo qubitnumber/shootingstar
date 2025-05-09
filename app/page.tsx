@@ -10,7 +10,7 @@ import { RedirectToSignIn, SignedIn, SignedOut } from '@clerk/nextjs'
 export default function Home() {
 
   return (
-    <section className='mt-[65px]'>
+    <section className='mt-[30px]'>
       <div className='container'>
         {/* <SignedOut>
           <RedirectToSignIn />

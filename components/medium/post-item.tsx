@@ -13,6 +13,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { MessageCircle, Sparkle, ThumbsUp, Hash } from 'lucide-react'
 import { useQuery } from 'convex/react'
 import { api } from '@/convex/_generated/api'
+import { Button } from '../ui/button'
 
 export default function PostItem({ post }: { post: Post }) {
   const comments = useQuery(api.comments.getCommentsByPostId, { postId: post._id})
@@ -64,14 +65,13 @@ export default function PostItem({ post }: { post: Post }) {
             </div>
 
           {/* Tag */}
-          <div className='mt-7 flex items-center justify-between text-sm text-muted-foreground'>
-            <div className='flex items-center gap-2'>
+          <div className='mt-5 flex items-center justify-between text-xm text-muted-foreground'>
+            <div className='flex items-center'>
               {post.tags && post.tags.length > 0 && post.tags.map((tag: any, i) =>(
-                <Link key={i} href={`/tags/${tag.text}`} className='block'>
-                  <div className='flex items-center'>
-                    <Hash className='h-4 w-4' />
-                    <span>{tag.text.toUpperCase()}</span>
-                  </div>
+                <Link key={i} href={`/tags/${tag.text}`}>
+                  <Button variant="link" className='font-light'>
+                    <span>#{tag.text.toUpperCase()}</span>
+                  </Button>
                 </Link>
               ))}
             </div>
