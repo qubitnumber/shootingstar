@@ -13,7 +13,7 @@ export default function Home() {
   
   if (!search) {
     return (
-      <Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <MediumPage />
       </Suspense>
     )
@@ -21,7 +21,7 @@ export default function Home() {
 
   if (search === 'shadcn') {
     return (
-      <Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <ShadcnPage />
       </Suspense>
     )
