@@ -77,7 +77,7 @@ function Tabs() {
   return (
     <div className='inline-flex flex-row items-center font-light text-sm gap-10'>
       <Link
-        href='/'
+        href='/?tab=medium'
         onNavigate={() => setLicked('medium')}
         className={`border-b ${linked === 'medium' && 'border-b-black border-b-2'}`}
       >

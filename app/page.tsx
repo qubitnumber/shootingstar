@@ -11,7 +11,7 @@ export default function Home() {
   const searchParams = useSearchParams()
   const search = searchParams.get('tab')
   
-  if (!search) {
+  if (!search || search === 'medium') {
     return (
       <Suspense>
         <MediumPage />
