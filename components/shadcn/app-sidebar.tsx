@@ -55,23 +55,7 @@ const data = {
           isActive: true,
         },
         {
-          title: "Rendering",
-          url: "#",
-        },
-        {
-          title: "Caching",
-          url: "#",
-        },
-        {
           title: "Styling",
-          url: "#",
-        },
-        {
-          title: "Optimizing",
-          url: "#",
-        },
-        {
-          title: "Configuring",
           url: "#",
         },
         {
@@ -79,15 +63,7 @@ const data = {
           url: "#",
         },
         {
-          title: "Authentication",
-          url: "#",
-        },
-        {
           title: "Deploying",
-          url: "#",
-        },
-        {
-          title: "Upgrading",
           url: "#",
         },
       ],
@@ -99,10 +75,6 @@ const data = {
       items: [
         {
           title: "Components",
-          url: "#",
-        },
-        {
-          title: "File Conventions",
           url: "#",
         },
         {
@@ -130,18 +102,6 @@ const data = {
         },
         {
           title: "Fast Refresh",
-          url: "#",
-        },
-        {
-          title: "Next.js Compiler",
-          url: "#",
-        },
-        {
-          title: "Supported Browsers",
-          url: "#",
-        },
-        {
-          title: "Turbopack",
           url: "#",
         },
       ],
