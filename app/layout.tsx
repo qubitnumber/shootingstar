@@ -1,5 +1,6 @@
 
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import localFont from 'next/font/local'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { cn } from '@/lib/utils'
@@ -52,7 +53,9 @@ export default function RootLayout({
         >
           <Providers>
             <Header />
-            <main className='grow'>{children}</main>
+            <Suspense>
+              <main className='grow'>{children}</main>
+            </Suspense>
             <Footer />
           </Providers>
         </body>

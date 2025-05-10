@@ -1,7 +1,6 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation'
-import { Suspense } from 'react'
 
 import MediumPage from '@/components/medium/mediumPage'
 import ShadcnPage from '@/components/shadcn/shadcnPage'
@@ -13,9 +12,7 @@ export default function Home() {
 
   if (search === 'shadcn') {
     return (
-      <Suspense>
-        <ShadcnPage />
-      </Suspense>
+      <ShadcnPage />
     )
   }
 
