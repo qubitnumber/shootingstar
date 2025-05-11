@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import localFont from 'next/font/local'
@@ -9,6 +8,8 @@ import { ClerkProvider } from '@clerk/nextjs'
 import Providers from '@/components/medium/providers'
 import Header from '@/components/medium/header'
 import Footer from '@/components/medium/footer'
+
+
 
 import './globals.css'
 import './prosemirror.css'

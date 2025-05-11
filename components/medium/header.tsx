@@ -15,7 +15,7 @@ import {
 import { Menu, NotebookPen } from 'lucide-react'
 import { SignedIn, SignedOut, UserButton, SignInButton } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
-import { useState } from 'react'
+import { useTab } from '@/context/TabContext'
 
 export default function Header() {
   return (
@@ -72,28 +72,28 @@ export default function Header() {
 }
 
 function Tabs() {
-  const [linked, setLicked] = useState('medium')
+  const { selectedTag, setSelectedTag } = useTab()
 
   return (
     <div className='inline-flex flex-row items-center font-light text-sm gap-10'>
       <Link
         href='/?tab=medium'
-        onNavigate={() => setLicked('medium')}
-        className={`border-b ${linked === 'medium' && 'border-b-black border-b-2'}`}
+        onNavigate={() => setSelectedTag('medium')}
+        className={`border-b ${(selectedTag === 'medium' || selectedTag === null) && 'border-b-black border-b-2'}`}
       >
         Medium
       </Link>
       <Link
         href='/?tab=shadcn'
-        onNavigate={() => setLicked('shadcn')}
-        className={`border-b ${linked === 'shadcn' && 'border-b-black border-b-2'}`}
+        onNavigate={() => setSelectedTag('shadcn')}
+        className={`border-b ${selectedTag === 'shadcn' && 'border-b-black border-b-2'}`}
       >
-        Shadcn/UI
+        Assests
       </Link>
       <Link
         href='/?tab=getpro'
-        onNavigate={() => setLicked('getpro')}
-        className={`border-b ${linked === 'getpro' && 'border-b-black border-b-2'}`}
+        onNavigate={() => setSelectedTag('getpro')}
+        className={`border-b ${selectedTag === 'getpro' && 'border-b-black border-b-2'}`}
       >
         Get Pro
       </Link>

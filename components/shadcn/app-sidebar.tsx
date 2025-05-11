@@ -1,8 +1,7 @@
 import * as React from "react"
-import { ChevronRight, Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { ChevronRight } from "lucide-react"
+import { MdFiberNew } from "react-icons/md";
 
-import { SearchForm } from "@/components/shadcn/search-form"
-import { VersionSwitcher } from "@/components/shadcn/version-switcher"
 import {
   Collapsible,
   CollapsibleContent,
@@ -22,128 +21,22 @@ import {
   SidebarMenuSkeleton,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import Link from "next/link"
 
-// This is sample data.
-const data = {
-  versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
-  navMain: [
-    {
-      title: "Getting Started",
-      url: "#",
-      icon: Home,
-      items: [
-        {
-          title: "Installation",
-          url: "#",
-          badge: 5,
-        },
-        {
-          title: "Project Structure",
-          url: "#",
-          badge: 10,
-        },
-      ],
-    },
-    {
-      title: "Building Application",
-      url: "#",
-      icon: Inbox,
-      items: [
-        {
-          title: "Routing",
-          url: "#",
-          badge: 50,
-        },
-        {
-          title: "Data Fetching",
-          url: "#",
-          badge: 23,
-          isActive: true,
-        },
-        {
-          title: "Styling",
-          url: "#",
-          badge: 25,
-        },
-        {
-          title: "Testing",
-          url: "#",
-          badge: 2,
-        },
-        {
-          title: "Deploying",
-          url: "#",
-          badge: 15,
-        },
-      ],
-    },
-    {
-      title: "API Reference",
-      url: "#",
-      icon: Calendar,
-      items: [
-        {
-          title: "Components",
-          url: "#",
-          badge: 10,
-        },
-        {
-          title: "Functions",
-          url: "#",
-          badge: 18,
-        },
-        {
-          title: "next.config.js Options",
-          url: "#",
-          badge: 7,
-        },
-        {
-          title: "CLI",
-          url: "#",
-          badge: 30,
-        },
-      ],
-    },
-    {
-      title: "Architecture",
-      url: "#",
-      icon: Search,
-      items: [
-        {
-          title: "Accessibility",
-          url: "#",
-          badge: 5,
-        },
-        {
-          title: "Fast Refresh",
-          url: "#",
-          badge: 7,
-        },
-      ],
-    },
-    {
-      title: "Community",
-      url: "#",
-      icon: Settings,
-      items: [
-        {
-          title: "Contribution Guide",
-          url: "#",
-          badge: 3,
-        },
-      ],
-    },
-  ],
-}
+import { getSideNavList } from '@/lib/nav-list'
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const [open, setOpen] = React.useState(false)
+export function AppSidebar({
+  selectedMenu, setSelectedMenu
+}: {
+  selectedMenu: string, setSelectedMenu: Function
+}) {
+  const menuList = getSideNavList();
 
   return (
-    <Sidebar className='mt-16 hidden md:block' {...props}>
+    <Sidebar className='mt-16 hidden md:block'>
       <SidebarContent className="gap-0 mt-3 ml-2">
         {/* We create a collapsible SidebarGroup for each parent. */}
-        {data.navMain.map((item) => (
+        {menuList.navMain.map((item) => (
           <Collapsible
             key={item.title}
             title={item.title}
@@ -164,13 +57,18 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <CollapsibleContent>
                 <SidebarGroupContent>
                   <SidebarMenu>
-                    {item.items.map((item) => (
-                      <SidebarMenuItem key={item.title}>
-                        <SidebarMenuButton asChild isActive={item.isActive}>
-                          <a href={item.url}>
-                            <span className="ml-6">{item.title}</span>
-                          </a>
+                    {item.items.map((subItem) => (
+                      <SidebarMenuItem key={subItem.title}>
+                        <SidebarMenuButton asChild>
+                          <Link href={subItem.url} onNavigate={() => setSelectedMenu(item.title + '/' + subItem.title)}>
+                            <span className={`ml-6 ${selectedMenu.split('/')[1] === subItem.title && 'font-bold border-b border-black'}`}>
+                              {subItem.title}
+                            </span>
+                            {subItem.isNew && (
+                              <span className="text-2xl"><MdFiberNew /></span>)}
+                          </Link>
                         </SidebarMenuButton>
+                        <SidebarMenuBadge>{subItem.badge}</SidebarMenuBadge>
                       </SidebarMenuItem>
                     ))}
                   </SidebarMenu>

@@ -4,6 +4,7 @@ import { ThemeProvider, useTheme } from 'next-themes'
 import { Toaster } from '@/components/ui/sonner'
 import { ConvexClientProvider } from '@/components/medium/convex-client-provider'
 import { SearchProvider } from '@/context/SearchContext';
+import { TabProvider } from '@/context/TabContext'
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -14,10 +15,12 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         defaultTheme='dark'
         disableTransitionOnChange
       >
-        <SearchProvider>
-          {children}
-          <ToasterProvider />
-        </SearchProvider>
+        <TabProvider>
+          <SearchProvider>
+            {children}
+            <ToasterProvider />
+          </SearchProvider>
+        </TabProvider>
       </ThemeProvider>
     </ConvexClientProvider>
   )
