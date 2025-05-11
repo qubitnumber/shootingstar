@@ -16,8 +16,10 @@ import {
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
+  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarMenuSkeleton,
   SidebarRail,
 } from "@/components/ui/sidebar"
 
@@ -33,38 +35,45 @@ const data = {
         {
           title: "Installation",
           url: "#",
+          badge: 5,
         },
         {
           title: "Project Structure",
           url: "#",
+          badge: 10,
         },
       ],
     },
     {
-      title: "Building Your Application",
+      title: "Building Application",
       url: "#",
       icon: Inbox,
       items: [
         {
           title: "Routing",
           url: "#",
+          badge: 50,
         },
         {
           title: "Data Fetching",
           url: "#",
+          badge: 23,
           isActive: true,
         },
         {
           title: "Styling",
           url: "#",
+          badge: 25,
         },
         {
           title: "Testing",
           url: "#",
+          badge: 2,
         },
         {
           title: "Deploying",
           url: "#",
+          badge: 15,
         },
       ],
     },
@@ -76,18 +85,22 @@ const data = {
         {
           title: "Components",
           url: "#",
+          badge: 10,
         },
         {
           title: "Functions",
           url: "#",
+          badge: 18,
         },
         {
           title: "next.config.js Options",
           url: "#",
+          badge: 7,
         },
         {
           title: "CLI",
           url: "#",
+          badge: 30,
         },
       ],
     },
@@ -99,10 +112,12 @@ const data = {
         {
           title: "Accessibility",
           url: "#",
+          badge: 5,
         },
         {
           title: "Fast Refresh",
           url: "#",
+          badge: 7,
         },
       ],
     },
@@ -114,6 +129,7 @@ const data = {
         {
           title: "Contribution Guide",
           url: "#",
+          badge: 3,
         },
       ],
     },

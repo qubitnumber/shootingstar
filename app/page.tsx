@@ -16,6 +16,12 @@ export default function Home() {
     )
   }
 
+  if (search === 'getpro') {
+    return (
+      <></>
+    )
+  }
+
   return (
     <MediumPage />
   )
