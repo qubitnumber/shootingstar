@@ -38,7 +38,7 @@ export function AppSidebar({
           <Collapsible
             key={item.title}
             title={item.title}
-            defaultOpen
+            defaultOpen={item.title === 'UI Components' && true}
             className="group/collapsible"
           >
             <SidebarGroup>
