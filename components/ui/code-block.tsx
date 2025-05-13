@@ -109,7 +109,7 @@ export const CodeBlock = ({
         >
           {String(activeCode)}
         </SyntaxHighlighter>
-        <ScrollBar orientation="vertival" />
+        <ScrollBar orientation="vertical" />
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
     </div>
