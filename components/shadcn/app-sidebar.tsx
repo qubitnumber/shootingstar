@@ -13,17 +13,15 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
-  SidebarHeader,
   SidebarMenu,
   SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSkeleton,
   SidebarRail,
 } from "@/components/ui/sidebar"
 import Link from "next/link"
 
-import { getSideNavList } from '@/lib/nav-list'
+import { getSideNavList } from '@/components/shadcn/registry/nav-list'
 
 export function AppSidebar({
   selectedMenu, setSelectedMenu

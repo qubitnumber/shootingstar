@@ -1,4 +1,9 @@
+import { ComponentType, useState } from "react"
+
 import { AppSidebar } from "@/components/shadcn/app-sidebar"
+import PostCard from '@/components/shadcn/post-card'
+import { navMapPostcard } from '@/components/shadcn/registry/nav_map_postcard'
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,12 +18,14 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { Skeleton } from "@/components/ui/skeleton"
-import { useState } from "react"
+import {
+  Card,
+  CardContent,
+} from "@/components/ui/card"
 
 
 export default function Page() {
-  const [selectedMenu, setSelectedMenu] = useState('Getting Started/Installation')
+  const [selectedMenu, setSelectedMenu] = useState('UI Components/Accordions')
 
   return (
     <SidebarProvider>
@@ -41,10 +48,25 @@ export default function Page() {
             </BreadcrumbList>
           </Breadcrumb>
         </header>
-        <div className="flex flex-col sticky mt-20 mr-9 pt-1 pl-8">
-          {Array.from({ length: 18 }).map((_, index) => (
-            <Skeleton key={index} className="h-7 w-full mb-2"/>
-          ))}
+        <div className="grid grid-cols-2 gap-x-6 mt-16 mr-9 pt-2 pl-8 pr-8">
+        {navMapPostcard[selectedMenu]
+          ?
+          navMapPostcard[selectedMenu].map((card: { compoentTitle: string, accordionDemo: ComponentType; codeComponent: ComponentType }) => {
+              return (
+                <Card key={card.compoentTitle} className="m-3 w-full">
+                  <CardContent>
+                    <PostCard
+                      compoentTitle={card.compoentTitle}
+                      ComponentDemo={card.accordionDemo}
+                      CodeComponent={card.codeComponent}
+                    />
+                  </CardContent>
+                </Card>
+              )
+            })
+          :
+            null
+        }
         </div>
       </SidebarInset>
     </SidebarProvider>

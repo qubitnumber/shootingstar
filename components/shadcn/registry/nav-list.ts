@@ -113,7 +113,7 @@ export function getSideNavList() {
           {
             title: "Accordions",
             url: "#",
-            badge: 0,
+            badge: 2,
           },
           {
             title: "AI Chats",
