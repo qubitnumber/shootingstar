@@ -6,6 +6,9 @@ const nextConfig = {
       {
         hostname: 'formal-grasshopper-210.convex.cloud',
       },
+      {
+        hostname: 'images.unsplash.com',
+      }
     ],
   }
 };

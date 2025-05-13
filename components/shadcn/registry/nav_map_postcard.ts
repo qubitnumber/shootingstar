@@ -5,6 +5,10 @@ import { AiChatsDemo_1, CodeAiChats_1 } from '@/components/shadcn/registry/ui/ai
 
 import { AlertsDemo_1, CodeAlerts_1 } from '@/components/shadcn/registry/ui/alerts/alerts-1'
 
+import { AvatarsDemo_1, CodeAvatars_1 } from '@/components/shadcn/registry/ui/avatars/avatars-1'
+
+import { BadgeDemo_1, CodeBadge_1 } from '@/components/shadcn/registry/ui/badge/badge-1'
+
 
 export const navMapPostcard: any = {
   'UI Components/Accordions': [
@@ -31,6 +35,20 @@ export const navMapPostcard: any = {
       compoentTitle: 'Default',
       accordionDemo: AlertsDemo_1,
       codeComponent: CodeAlerts_1,
+    }
+  ],
+    'UI Components/Avatars': [
+    {
+      compoentTitle: 'Default',
+      accordionDemo: AvatarsDemo_1,
+      codeComponent: CodeAvatars_1,
+    }
+  ],
+    'UI Components/Badges': [
+    {
+      compoentTitle: 'Default',
+      accordionDemo: BadgeDemo_1,
+      codeComponent: CodeBadge_1,
     }
   ]
 }

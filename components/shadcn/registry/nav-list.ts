@@ -129,12 +129,12 @@ export function getSideNavList() {
           {
             title: "Avatars",
             url: "#",
-            badge: 0,
+            badge: 1,
           },
           {
             title: "Badges",
             url: "#",
-            badge: 0,
+            badge: 1,
           },
           {
             title: "Buttons",

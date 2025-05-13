@@ -37,7 +37,7 @@ export default function PostCard({
         </Popover>
       </div>
       <Separator className="my-2" />
-      <div className="flex justify-center items-center m-3">
+      <div className="flex justify-center items-center pt-5">
         <ComponentDemo />
       </div>
     </div>

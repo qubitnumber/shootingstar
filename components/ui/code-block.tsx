@@ -4,6 +4,12 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IconCheck, IconCopy } from "@tabler/icons-react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 type CodeBlockProps = {
   language: string;
@@ -76,12 +82,21 @@ export const CodeBlock = ({
         )}
         <div className="flex justify-between items-center -mt-5">
           <div className="text-xs text-zinc-400">{filename}</div>
-          <button
-            onClick={copyToClipboard}
-            className="flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200 transition-colors font-sans mb-5"
-          >
-            {copied ? <IconCheck size={14} /> : <IconCopy size={14} />}
-          </button>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button
+                  onClick={copyToClipboard}
+                  className="flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200 transition-colors font-sans mb-5 mr-5"
+                >
+                  {copied ? <IconCheck size={14} /> : <IconCopy size={14} />}
+                </button>
+              </TooltipTrigger>
+              <TooltipContent className="p-0">
+              <span className={'text-opacity-80 text-xs'}>Copy Code</span>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
       </div>
       <ScrollArea className="h-[600px] w-[650px] whitespace-nowrap border-none p-0">

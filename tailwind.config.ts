@@ -35,6 +35,9 @@ const config: Config = {
                     ...fontFamily.mono
                 ]
   		},
+			fontSize: {
+				'tremor-label': '0.75rem',
+			},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -85,12 +88,26 @@ const config: Config = {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			},
+				tremor: {
+          background: {
+            subtle: '#f3f4f6',
+          },
+          'content-emphasis': '#374151',
+        },
+        'dark-tremor': {
+          background: {
+            subtle: '#1f2937',
+          },
+          'content-emphasis': '#d1d5db',
+        },
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
+  			sm: 'calc(var(--radius) - 4px)',
+				'tremor-small': '0.375rem',
+        'tremor-default': '0.5rem',
   		},
   		keyframes: {
   			'accordion-down': {
