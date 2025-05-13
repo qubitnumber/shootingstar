@@ -124,7 +124,7 @@ export function getSideNavList() {
           {
             title: "Alerts",
             url: "#",
-            badge: 0,
+            badge: 1,
           },
           {
             title: "Avatars",
