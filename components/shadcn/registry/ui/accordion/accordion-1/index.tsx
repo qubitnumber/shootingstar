@@ -2,7 +2,7 @@ import { CodeBlock } from "@/components/ui/code-block";
 
 import Accordion_1 from '@/components/shadcn/registry/ui/accordion/accordion-1/accordion-demo'
 
-function CodeComponent_1() {
+function CodeAccordion_1() {
   return (
     <CodeBlock
       language="tsx"
@@ -10,7 +10,7 @@ function CodeComponent_1() {
       tabs={[
         {
           name: "Demo.tsx",
-          code: AccordionDemoToCode,
+          code: DemoToCode,
           language: "tsx"
         },
         {
@@ -28,7 +28,7 @@ function CodeComponent_1() {
   )
 }
 
-const AccordionDemoToCode = `import {
+const DemoToCode = `import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -163,4 +163,4 @@ export function getAccordionItems() {
 }
 `
 
-export { Accordion_1, CodeComponent_1 }
+export { Accordion_1, CodeAccordion_1 }

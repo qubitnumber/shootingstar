@@ -118,7 +118,7 @@ export function getSideNavList() {
           {
             title: "AI Chats",
             url: "#",
-            badge: 0,
+            badge: 1,
             isNew: true,
           },
           {

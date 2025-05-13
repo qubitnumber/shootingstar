@@ -2,7 +2,7 @@ import { CodeBlock } from "@/components/ui/code-block";
 
 import Accordion_2 from '@/components/shadcn/registry/ui/accordion/accordion-2/accordion-demo'
 
-function CodeComponent_2() {
+function CodeAccordion_2() {
   return (
     <CodeBlock
       language="tsx"
@@ -164,4 +164,4 @@ export function getAccordionItems() {
 }
 `
 
-export { Accordion_2, CodeComponent_2 }
+export { Accordion_2, CodeAccordion_2 }
