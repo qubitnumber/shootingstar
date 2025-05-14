@@ -13,6 +13,11 @@ import { ButtonDemo_1, CodeButton_1 } from '@/components/shadcn/registry/ui/butt
 
 import { CalendarDemo_1, CodeCalendar_1 } from '@/components/shadcn/registry/ui/calendars/calendar-1'
 
+import { CardDemo_1, CodeCard_1 } from '@/components/shadcn/registry/ui/cards/card-1'
+import { CardDemo_2, CodeCard_2 } from '@/components/shadcn/registry/ui/cards/card-2'
+
+import { CarouselDemo_1, CodeCarousel_1 } from '@/components/shadcn/registry/ui/carousels/carousel-1'
+
 
 export const navMapPostcard: any = {
   'UI Components/Accordions': [
@@ -67,6 +72,25 @@ export const navMapPostcard: any = {
       compoentTitle: 'Date Picker',
       accordionDemo: CalendarDemo_1,
       codeComponent: CodeCalendar_1,
+    }
+  ],
+    'UI Components/Cards': [
+    {
+      compoentTitle: 'Default',
+      accordionDemo: CardDemo_1,
+      codeComponent: CodeCard_1,
+    },
+    {
+      compoentTitle: 'Glass Time Card',
+      accordionDemo: CardDemo_2,
+      codeComponent: CodeCard_2,
+    }
+  ],
+    'UI Components/Carousels': [
+    {
+      compoentTitle: 'Glass Time Card',
+      accordionDemo: CarouselDemo_1,
+      codeComponent: CodeCarousel_1,
     }
   ]
 }

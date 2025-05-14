@@ -150,12 +150,12 @@ export function getSideNavList() {
           {
             title: "Cards",
             url: "#",
-            badge: 0,
+            badge: 2,
           },
           {
             title: "Carousels",
             url: "#",
-            badge: 0,
+            badge: 1,
           },
           {
             title: "Chekboxes",
