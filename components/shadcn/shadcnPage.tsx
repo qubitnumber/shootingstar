@@ -2,7 +2,7 @@ import { ComponentType, useState } from "react"
 
 import { AppSidebar } from "@/components/shadcn/app-sidebar"
 import PostCard from '@/components/shadcn/post-card'
-import { navMapPostcard } from '@/components/shadcn/registry/nav_map_postcard'
+import { navMapPostcard } from '@/components/shadcn/registry/nav-map-postcard'
 
 import {
   Breadcrumb,

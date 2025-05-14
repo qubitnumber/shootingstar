@@ -20,6 +20,10 @@ import { CarouselDemo_1, CodeCarousel_1 } from '@/components/shadcn/registry/ui/
 
 import { CheckboxDemo_1, CodeCheckbox_1 } from '@/components/shadcn/registry/ui/checkboxs/checkbox-1'
 
+import { DatePickerDemo_1, CodeDatePicker_1 } from '@/components/shadcn/registry/ui/date-pickers/date-picker-1'
+
+import { DialogDemo_1, CodeDialog_1 } from '@/components/shadcn/registry/ui/dialogs-models/dialog-model-1'
+
 
 export const navMapPostcard: any = {
   'UI Components/Accordions': [
@@ -100,6 +104,20 @@ export const navMapPostcard: any = {
       compoentTitle: 'Default',
       accordionDemo: CheckboxDemo_1,
       codeComponent: CodeCheckbox_1,
+    }
+  ],
+    'UI Components/Date Pickers': [
+    {
+      compoentTitle: 'Date Range Picker',
+      accordionDemo: DatePickerDemo_1,
+      codeComponent: CodeDatePicker_1,
+    }
+  ],
+    'UI Components/Dialogs/Models': [
+    {
+      compoentTitle: 'Rating dialog',
+      accordionDemo: DialogDemo_1,
+      codeComponent: CodeDialog_1,
     }
   ]
 }

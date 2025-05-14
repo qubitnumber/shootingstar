@@ -165,13 +165,13 @@ export function getSideNavList() {
           {
             title: "Date Pickers",
             url: "#",
-            badge: 0,
+            badge: 1,
             isNew: true,
           },
           {
             title: "Dialogs/Models",
             url: "#",
-            badge: 0,
+            badge: 1,
           },
           {
             title: "Dropdowns",
