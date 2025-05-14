@@ -160,7 +160,7 @@ export function getSideNavList() {
           {
             title: "Chekboxes",
             url: "#",
-            badge: 0,
+            badge: 1,
           },
           {
             title: "Date Pickers",

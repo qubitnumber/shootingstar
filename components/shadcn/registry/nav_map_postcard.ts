@@ -18,6 +18,8 @@ import { CardDemo_2, CodeCard_2 } from '@/components/shadcn/registry/ui/cards/ca
 
 import { CarouselDemo_1, CodeCarousel_1 } from '@/components/shadcn/registry/ui/carousels/carousel-1'
 
+import { CheckboxDemo_1, CodeCheckbox_1 } from '@/components/shadcn/registry/ui/checkboxs/checkbox-1'
+
 
 export const navMapPostcard: any = {
   'UI Components/Accordions': [
@@ -88,9 +90,16 @@ export const navMapPostcard: any = {
   ],
     'UI Components/Carousels': [
     {
-      compoentTitle: 'Glass Time Card',
+      compoentTitle: 'Default',
       accordionDemo: CarouselDemo_1,
       codeComponent: CodeCarousel_1,
+    }
+  ],
+    'UI Components/Chekboxes': [
+    {
+      compoentTitle: 'Default',
+      accordionDemo: CheckboxDemo_1,
+      codeComponent: CodeCheckbox_1,
     }
   ]
 }
