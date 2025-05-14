@@ -9,6 +9,8 @@ import { AvatarsDemo_1, CodeAvatars_1 } from '@/components/shadcn/registry/ui/av
 
 import { BadgeDemo_1, CodeBadge_1 } from '@/components/shadcn/registry/ui/badge/badge-1'
 
+import { ButtonDemo_1, CodeButton_1 } from '@/components/shadcn/registry/ui/button/button-1'
+
 
 export const navMapPostcard: any = {
   'UI Components/Accordions': [
@@ -49,6 +51,13 @@ export const navMapPostcard: any = {
       compoentTitle: 'Default',
       accordionDemo: BadgeDemo_1,
       codeComponent: CodeBadge_1,
+    }
+  ],
+    'UI Components/Buttons': [
+    {
+      compoentTitle: 'Default',
+      accordionDemo: ButtonDemo_1,
+      codeComponent: CodeButton_1,
     }
   ]
 }

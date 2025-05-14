@@ -14,12 +14,12 @@ function CodeAlerts_1() {
           language: "tsx"
         },
         {
-          name: "Alert.tsx",
+          name: "alert.tsx",
           code: AlertToCode,
           language: "tsx",
         },
         {
-          name: "Button.tsx",
+          name: "button.tsx",
           code: ButtonToCode,
           language: "tsx",
         }

@@ -14,7 +14,7 @@ function CodeAccordion_2() {
           language: "tsx"
         },
         {
-          name: "Accordion.tsx",
+          name: "accordion.tsx",
           code: AccordionToCode,
           language: "tsx",
         },

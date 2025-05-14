@@ -14,7 +14,7 @@ function CodeAvatars_1() {
           language: "tsx"
         },
         {
-          name: "AnimatedTooltip.tsx",
+          name: "animated-tooltip.tsx",
           code: AnimatedTooltipToCode,
           language: "tsx",
         }

@@ -139,7 +139,7 @@ export function getSideNavList() {
           {
             title: "Buttons",
             url: "#",
-            badge: 0,
+            badge: 1,
           },
           {
             title: "Calendars",

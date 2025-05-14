@@ -14,7 +14,7 @@ function CodeBadge_1() {
           language: "tsx"
         },
         {
-          name: "BadgeDelta.tsx",
+          name: "badge-delta.tsx",
           code: BadgeDeltaToCode,
           language: "tsx",
         }
