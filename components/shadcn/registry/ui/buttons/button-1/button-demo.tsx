@@ -1,4 +1,4 @@
-import { RetroButton } from "@/components/shadcn/registry/ui/button/button-1/retro-button"
+import { RetroButton } from "@/components/shadcn/registry/ui/buttons/button-1/retro-button"
 
 export default function RetroButtonDemo() {
   return (

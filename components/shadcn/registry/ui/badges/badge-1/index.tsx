@@ -1,6 +1,6 @@
 import { CodeBlock } from "@/components/ui/code-block";
 
-import BadgeDemo_1 from '@/components/shadcn/registry/ui/badge/badge-1/badge-demo'
+import BadgeDemo_1 from '@/components/shadcn/registry/ui/badges/badge-1/badge-demo'
 
 function CodeBadge_1() {
   return (

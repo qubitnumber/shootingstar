@@ -1,6 +1,6 @@
 import { CodeBlock } from "@/components/ui/code-block";
 
-import AvatarsDemo_1 from '@/components/shadcn/registry/ui/avatars/avatars-1/avatars-demo'
+import AvatarsDemo_1 from '@/components/shadcn/registry/ui/avatars/avatar-1/avatar-demo'
 
 function CodeAvatars_1() {
   return (

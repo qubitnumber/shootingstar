@@ -1,6 +1,6 @@
 import { CodeBlock } from "@/components/ui/code-block";
 
-import Accordion_1 from '@/components/shadcn/registry/ui/accordion/accordion-1/accordion-demo'
+import Accordion_1 from '@/components/shadcn/registry/ui/accordions/accordion-1/accordion-demo'
 
 function CodeAccordion_1() {
   return (

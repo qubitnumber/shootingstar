@@ -1,6 +1,6 @@
 import { CodeBlock } from "@/components/ui/code-block";
 
-import ButtonDemo_1 from '@/components/shadcn/registry/ui/button/button-1/button-demo'
+import ButtonDemo_1 from '@/components/shadcn/registry/ui/buttons/button-1/button-demo'
 
 function CodeButton_1() {
   return (

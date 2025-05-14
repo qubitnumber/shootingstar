@@ -1,5 +1,5 @@
-import { Alert } from "@/components/shadcn/registry/ui/alerts/alerts-1/alert"
-import { Button } from "@/components/shadcn/registry/ui/alerts/alerts-1/button"
+import { Alert } from "@/components/shadcn/registry/ui/alerts/alert-1/alert"
+import { Button } from "@/components/shadcn/registry/ui/alerts/alert-1/button"
 import { X } from "lucide-react"
 
 export default function AlertUserMention() {

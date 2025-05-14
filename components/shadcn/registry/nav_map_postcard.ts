@@ -1,15 +1,17 @@
-import { Accordion_1, CodeAccordion_1 } from '@/components/shadcn/registry/ui/accordion/accordion-1'
-import { Accordion_2, CodeAccordion_2 } from '@/components/shadcn/registry/ui/accordion/accordion-2'
+import { Accordion_1, CodeAccordion_1 } from '@/components/shadcn/registry/ui/accordions/accordion-1'
+import { Accordion_2, CodeAccordion_2 } from '@/components/shadcn/registry/ui/accordions/accordion-2'
 
-import { AiChatsDemo_1, CodeAiChats_1 } from '@/components/shadcn/registry/ui/aichats/aichats-1'
+import { AiChatsDemo_1, CodeAiChats_1 } from '@/components/shadcn/registry/ui/aichats/aichat-1'
 
-import { AlertsDemo_1, CodeAlerts_1 } from '@/components/shadcn/registry/ui/alerts/alerts-1'
+import { AlertsDemo_1, CodeAlerts_1 } from '@/components/shadcn/registry/ui/alerts/alert-1'
 
-import { AvatarsDemo_1, CodeAvatars_1 } from '@/components/shadcn/registry/ui/avatars/avatars-1'
+import { AvatarsDemo_1, CodeAvatars_1 } from '@/components/shadcn/registry/ui/avatars/avatar-1'
 
-import { BadgeDemo_1, CodeBadge_1 } from '@/components/shadcn/registry/ui/badge/badge-1'
+import { BadgeDemo_1, CodeBadge_1 } from '@/components/shadcn/registry/ui/badges/badge-1'
 
-import { ButtonDemo_1, CodeButton_1 } from '@/components/shadcn/registry/ui/button/button-1'
+import { ButtonDemo_1, CodeButton_1 } from '@/components/shadcn/registry/ui/buttons/button-1'
+
+import { CalendarDemo_1, CodeCalendar_1 } from '@/components/shadcn/registry/ui/calendars/calendar-1'
 
 
 export const navMapPostcard: any = {
@@ -58,6 +60,13 @@ export const navMapPostcard: any = {
       compoentTitle: 'Default',
       accordionDemo: ButtonDemo_1,
       codeComponent: CodeButton_1,
+    }
+  ],
+    'UI Components/Calendars': [
+    {
+      compoentTitle: 'Date Picker',
+      accordionDemo: CalendarDemo_1,
+      codeComponent: CodeCalendar_1,
     }
   ]
 }

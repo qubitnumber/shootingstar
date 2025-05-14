@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { AnimatedTooltip } from '@/components/shadcn/registry/ui/avatars/avatars-1/animated-tooltip'
+import { AnimatedTooltip } from '@/components/shadcn/registry/ui/avatars/avatar-1/animated-tooltip'
 
 const people = [
   {

@@ -1,4 +1,4 @@
-import { BadgeDelta } from "@/components/shadcn/registry/ui/badge/badge-1/badge-delta"
+import { BadgeDelta } from "@/components/shadcn/registry/ui/badges/badge-1/badge-delta"
 
 export default function BadgeDemo() {
   return (

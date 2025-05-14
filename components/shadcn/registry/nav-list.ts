@@ -144,7 +144,7 @@ export function getSideNavList() {
           {
             title: "Calendars",
             url: "#",
-            badge: 0,
+            badge: 1,
             isNew: true,
           },
           {

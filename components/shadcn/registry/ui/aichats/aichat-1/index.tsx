@@ -1,6 +1,6 @@
 import { CodeBlock } from "@/components/ui/code-block";
 
-import AiChatsDemo_1 from '@/components/shadcn/registry/ui/aichats/aichats-1/aichats-demo'
+import AiChatsDemo_1 from '@/components/shadcn/registry/ui/aichats/aichat-1/aichat-demo'
 
 function CodeAiChats_1() {
   return (

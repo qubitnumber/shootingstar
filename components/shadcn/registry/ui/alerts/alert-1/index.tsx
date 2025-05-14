@@ -1,6 +1,6 @@
 import { CodeBlock } from "@/components/ui/code-block";
 
-import AlertsDemo_1 from '@/components/shadcn/registry/ui/alerts/alerts-1/alerts-demo'
+import AlertsDemo_1 from '@/components/shadcn/registry/ui/alerts/alert-1/alert-demo'
 
 function CodeAlerts_1() {
   return (

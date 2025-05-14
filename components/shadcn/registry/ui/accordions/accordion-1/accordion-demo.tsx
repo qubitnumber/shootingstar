@@ -3,9 +3,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/shadcn/registry/ui/accordion/accordion-1/accordion'
+} from '@/components/shadcn/registry/ui/accordions/accordion-1/accordion'
 
-import { getAccordionItems } from '@/components/shadcn/registry/ui/accordion/accordion-items'
+import { getAccordionItems } from '@/components/shadcn/registry/ui/accordions/accordion-items'
 
 const items = getAccordionItems()
 
