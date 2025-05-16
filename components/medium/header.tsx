@@ -25,16 +25,19 @@ export default function Header() {
           <SheetTrigger className='sm:hidden'>
             <Menu className='h-6 w-6' />
           </SheetTrigger>
-          <SheetContent side='left'>
+          <SheetContent side='left' className="w-[120px] sm:w-[200px]">
             <SheetTitle className="hidden">
               Bridge AI
             </SheetTitle>
             <ul className='flex flex-col gap-3 text-sm'>
-              <li className='hidden font-serif text-lg font-semibold'>
+              <li className='font-serif text-lg font-semibold mb-5'>
                 <SheetClose asChild>
                   <Link href='/'>Bridge AI</Link>
                 </SheetClose>
               </li>
+              <SheetClose asChild>
+                <Tabs isSheet={true} />
+              </SheetClose>
             </ul>
           </SheetContent>
         </Sheet>
@@ -43,7 +46,7 @@ export default function Header() {
           <li className='font-serif text-lg font-semibold mr-10'>
             <Link href='/'>Bridge AI</Link>
           </li>
-          <Tabs />
+          <Tabs isSheet={false} />
         </ul>
 
         <div className='flex items-center justify-between gap-6'>
@@ -71,11 +74,11 @@ export default function Header() {
   )
 }
 
-function Tabs() {
+function Tabs({ isSheet }: { isSheet: boolean}) {
   const { selectedTag, setSelectedTag } = useTab()
 
   return (
-    <div className='inline-flex flex-row items-center font-light text-sm gap-10'>
+    <div className={`inline-flex ${isSheet ? "flex-col items-start gap-5" : "flex-row items-center gap-10" } font-light text-sm`}>
       <Link
         href='/?tab=medium'
         onNavigate={() => setSelectedTag('medium')}
