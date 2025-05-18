@@ -17,7 +17,7 @@ export default function RecommendedTopics() {
   const tags = useQuery(api.posts.getPosTags)
 
   return (
-    <Card className='flex-1'>
+    <Card className='flex-1 mb-3'>
       <CardHeader>
         <CardTitle>Recommended Tags</CardTitle>
       </CardHeader>

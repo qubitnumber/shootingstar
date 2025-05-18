@@ -183,140 +183,140 @@ export function getSideNavList() {
             url: "#",
             badge: 1,
           },
-          {
-            title: "Empty States",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "File Trees",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "File Uploads",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Forms",
-            url: "#",
-            badge: 0,
-            isNew: true
-          },
-          {
-            title: "Icons",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Inputs",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Links",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Menus",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Notifications",
-            url: "#",
-            badge: 0,
-            isNew: true,
-          },
-          {
-            title: "Numbers",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Paginations",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Popovers",
-            url: "#",
-            badge: 0,
-            isNew: true,
-          },
-          {
-            title: "Radio Groups",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Selects",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Sidebars",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Sign Ins",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Sign Ups",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Sliders",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Spinner Loaders",
-            url: "#",
-            badge: 0,
-            isNew: true,
-          },
-          {
-            title: "Tables",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Tabs",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Tags",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Text Areas",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Toasts",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Toggles",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Tooltips",
-            url: "#",
-            badge: 0,
-          }
+          // {
+          //   title: "Empty States",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "File Trees",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "File Uploads",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Forms",
+          //   url: "#",
+          //   badge: 0,
+          //   isNew: true
+          // },
+          // {
+          //   title: "Icons",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Inputs",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Links",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Menus",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Notifications",
+          //   url: "#",
+          //   badge: 0,
+          //   isNew: true,
+          // },
+          // {
+          //   title: "Numbers",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Paginations",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Popovers",
+          //   url: "#",
+          //   badge: 0,
+          //   isNew: true,
+          // },
+          // {
+          //   title: "Radio Groups",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Selects",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Sidebars",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Sign Ins",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Sign Ups",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Sliders",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Spinner Loaders",
+          //   url: "#",
+          //   badge: 0,
+          //   isNew: true,
+          // },
+          // {
+          //   title: "Tables",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Tabs",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Tags",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Text Areas",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Toasts",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Toggles",
+          //   url: "#",
+          //   badge: 0,
+          // },
+          // {
+          //   title: "Tooltips",
+          //   url: "#",
+          //   badge: 0,
+          // }
         ]
       }
     ]

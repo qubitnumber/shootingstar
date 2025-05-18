@@ -93,13 +93,13 @@ function Tabs({ isSheet }: { isSheet: boolean}) {
       >
         Assests
       </Link>
-      <Link
+      {/* <Link
         href='/?tab=getpro'
         onNavigate={() => setSelectedTag('getpro')}
         className={`border-b ${selectedTag === 'getpro' && 'border-b-black border-b-2'}`}
       >
         Get Pro
-      </Link>
+      </Link> */}
     </div>
   )
 }
