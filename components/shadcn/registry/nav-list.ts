@@ -150,7 +150,7 @@ export function getSideNavList() {
           {
             title: "Cards",
             url: "#",
-            badge: 2,
+            badge: 1,
           },
           {
             title: "Carousels",

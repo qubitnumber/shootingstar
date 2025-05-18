@@ -90,11 +90,11 @@ export const navMapPostcard: any = {
       accordionDemo: CardDemo_1,
       codeComponent: CodeCard_1,
     },
-    {
-      compoentTitle: 'Glass Time Card',
-      accordionDemo: CardDemo_2,
-      codeComponent: CodeCard_2,
-    }
+    // {
+    //   compoentTitle: 'Glass Time Card',
+    //   accordionDemo: CardDemo_2,
+    //   codeComponent: CodeCard_2,
+    // }
   ],
     'UI Components/Carousels': [
     {
