@@ -20,9 +20,13 @@ import { CarouselDemo_1, CodeCarousel_1 } from '@/components/shadcn/registry/ui/
 
 import { CheckboxDemo_1, CodeCheckbox_1 } from '@/components/shadcn/registry/ui/checkboxs/checkbox-1'
 
+import { DataTableDemo_1, CodeDateTable_1 } from '@/components/shadcn/registry/ui/data-table/data-table-1'
+
 import { DatePickerDemo_1, CodeDatePicker_1 } from '@/components/shadcn/registry/ui/date-pickers/date-picker-1'
 
 import { DialogDemo_1, CodeDialog_1 } from '@/components/shadcn/registry/ui/dialogs-models/dialog-model-1'
+
+import { DropdownDemo_1, CodeDropdown_1 } from '@/components/shadcn/registry/ui/dropdowns/dropdown-1'
 
 
 export const navMapPostcard: any = {
@@ -106,6 +110,13 @@ export const navMapPostcard: any = {
       codeComponent: CodeCheckbox_1,
     }
   ],
+    'UI Components/Data Table': [
+    {
+      compoentTitle: 'TanStack Table',
+      accordionDemo: DataTableDemo_1,
+      codeComponent: CodeDateTable_1,
+    }
+  ],
     'UI Components/Date Pickers': [
     {
       compoentTitle: 'Date Range Picker',
@@ -118,6 +129,13 @@ export const navMapPostcard: any = {
       compoentTitle: 'Rating dialog',
       accordionDemo: DialogDemo_1,
       codeComponent: CodeDialog_1,
+    }
+  ],
+    'UI Components/Dropdowns': [
+    {
+      compoentTitle: 'Rating dialog',
+      accordionDemo: DropdownDemo_1,
+      codeComponent: CodeDropdown_1,
     }
   ]
 }

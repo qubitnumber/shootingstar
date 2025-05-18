@@ -36,6 +36,7 @@
     "@radix-ui/react-tooltip": "^1.2.6",
     "@remixicon/react": "^4.6.0",
     "@tabler/icons-react": "^3.31.0",
+    "@tanstack/react-table": "^8.21.3",
     "@types/mdx": "^2.0.13",
     "@vidstack/react": "^1.12.13",
     "badge": "^1.0.3",

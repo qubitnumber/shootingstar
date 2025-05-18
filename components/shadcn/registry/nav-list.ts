@@ -163,6 +163,11 @@ export function getSideNavList() {
             badge: 1,
           },
           {
+            title: "Data Table",
+            url: "#",
+            badge: 1,
+          },
+          {
             title: "Date Pickers",
             url: "#",
             badge: 1,
@@ -176,7 +181,7 @@ export function getSideNavList() {
           {
             title: "Dropdowns",
             url: "#",
-            badge: 0,
+            badge: 1,
           },
           {
             title: "Empty States",
