@@ -3,108 +3,108 @@ import { Presentation, LayoutList } from "lucide-react"
 export function getSideNavList() {
   return ({
     navMain: [
-      {
-        title: "Marketing Blocks",
-        url: "#",
-        icon: Presentation,
-        items: [
-          {
-            title: "Announcements",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Backgrounds",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Borders",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Calls to Action",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Clients",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Comparisons",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Docks",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Features",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Footers",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Heroes",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Hooks",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Images",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Maps",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Navigation Menus",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Pricing Sections",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Scroll Areas",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Testimonials",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Texts",
-            url: "#",
-            badge: 0,
-          },
-          {
-            title: "Videos",
-            url: "#",
-            badge: 0,
-          },
-        ]
-      },
+      // {
+      //   title: "Marketing Blocks",
+      //   url: "#",
+      //   icon: Presentation,
+      //   items: [
+      //     {
+      //       title: "Announcements",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Backgrounds",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Borders",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Calls to Action",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Clients",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Comparisons",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Docks",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Features",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Footers",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Heroes",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Hooks",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Images",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Maps",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Navigation Menus",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Pricing Sections",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Scroll Areas",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Testimonials",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Texts",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //     {
+      //       title: "Videos",
+      //       url: "#",
+      //       badge: 0,
+      //     },
+      //   ]
+      // },
       {
         title: "UI Components",
         url: "#",
