@@ -52,9 +52,13 @@ export default function Post({ slug }: { slug: string }) {
     )
   }
 
-  async function removePost() {
-    await deletePost({ slug })
-    router.push('/')
+  function removePost() {
+    new Promise(() => {
+      router.push('/')
+      setTimeout(() => {
+        deletePost({ slug })
+      }, 300)
+    })
   }
 
   async function addFollowing() {
