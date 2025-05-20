@@ -1,5 +1,3 @@
-"use client"
-
 import UpsertPostForm from '@/components/medium/upsert-post-form'
 
 export default async function Upsert({ params }: { params: Promise<{ slug: string }> }) {

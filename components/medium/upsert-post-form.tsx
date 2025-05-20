@@ -10,7 +10,6 @@ import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { Tag, TagInput } from 'tagmento';
 
 import { newPostSchema } from '@/lib/schemas'
-import { createSlugFromName } from '@/lib/utils'
 
 import { useQuery, useMutation } from 'convex/react'
 import { api } from '@/convex/_generated/api'
@@ -29,7 +28,7 @@ export default function UpsertPostForm({ slug }: { slug: string }) {
   const post = useQuery(api.posts.getPostBySlug, { slug })
   const upsertPost = useMutation(api.posts.upsertPost)
   const router = useRouter()
-
+  
   const [filePickerIsOpen, setFilePickerIsOpen] = useState(false)
   const [attach1PickerIsOpen, setAttach1PickerIsOpen] = useState(false)
   const [attach2PickerIsOpen, setAttach2PickerIsOpen] = useState(false)
@@ -40,7 +39,6 @@ export default function UpsertPostForm({ slug }: { slug: string }) {
   const [tags, setTags] = useState<Tag[]>([])
 
   const {
-    watch,
     register,
     setValue,
     control,
@@ -107,19 +105,6 @@ export default function UpsertPostForm({ slug }: { slug: string }) {
       }
   }, [post])
 
-  const title = watch('title')
-  useEffect(() => {
-    if (title) {
-      const fetchData = async () => {
-        const slug = await createSlugFromName(title)
-        if (slug) {
-          setValue('slug', slug, { shouldValidate: true })
-        }
-      }
-      fetchData()
-    }
-  }, [title])
-
   const processForm: SubmitHandler<Inputs> = async data => {
     const contentJson = data.content
     const hasContent = contentJson?.content?.some(
@@ -144,8 +129,6 @@ export default function UpsertPostForm({ slug }: { slug: string }) {
         attachImageId5: data.attachImageId5 as Id<'_storage'> | undefined
       })
 
-      if (!postSlug) throw new Error('Failed to upsert post')
-
       router.push(`/posts/${postSlug}`)
       toast.success('Post upserted!')
     } catch (error) {
@@ -153,7 +136,7 @@ export default function UpsertPostForm({ slug }: { slug: string }) {
     }
   }
   return (
-    <form>
+    <form onSubmit={handleSubmit(processForm)}>
       <div className='flex flex-col gap-4'>
         {/* Cover image */}
         <div className='flex justify-between gap-4 relative w-full max-w-screen-lg' >
@@ -395,7 +378,6 @@ export default function UpsertPostForm({ slug }: { slug: string }) {
           <Button
             disabled={isSubmitting}
             className='w-32'
-            onClick={handleSubmit(processForm)}
           >
             {isSubmitting ? (
               <>
@@ -409,7 +391,7 @@ export default function UpsertPostForm({ slug }: { slug: string }) {
           <Button
             variant="secondary"
             className='w-32'
-            onClick={handleSubmit(handleCancelGoBack)}
+            onClick={handleCancelGoBack}
           >
             Cancel
           </Button>
