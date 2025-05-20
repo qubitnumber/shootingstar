@@ -176,6 +176,7 @@ export default function UpsertPostForm({ slug }: { slug: string }) {
               <Button size='sm'>Select file</Button>
             </DialogTrigger>
             <DialogContent>
+              <DialogTitle className='hidden'></DialogTitle>
               <ImageUploader setImageId={setCoverImageId} />
             </DialogContent>
           </Dialog>

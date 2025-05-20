@@ -53,8 +53,8 @@ export default function Post({ slug }: { slug: string }) {
   }
 
   async function removePost() {
-    router.push('/')
     await deletePost({ slug })
+    router.push('/')
   }
 
   async function addFollowing() {
